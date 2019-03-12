@@ -1,0 +1,48 @@
+.main-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20vh;
+    position: relative;
+    border: 1px solid green;
+    background-color: whitesmoke;
+    width: auto;
+    height: 400px;
+}
+#backGround{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.answers{
+    text-align: center;
+}
+.questions{
+    text-align: center;
+}
+#timer{
+    text-align: center;
+}
+#question-number{
+    text-align: center;
+}
+.trivia-title{
+    text-align: center !important;
+    font-size: 35px;
+}
+.startbtn{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25vh;
+    display: flex;
+
+
+}
+#rights{
+    text-align: center;
+}
+#wrongs{
+    text-align: center;
+}
