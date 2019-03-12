@@ -164,11 +164,13 @@ $(document).ready(function () {
         // },
     ]
 
+    right.detach();
 
     function reset() {
         rightAnswers = 0;
         wrongAnswers = 0;
         questionCount = 0;
+
     }
 
     function nextQuestion() {
@@ -184,7 +186,6 @@ $(document).ready(function () {
             b.appendTo("#card").html(questions[questionCount].answers.b);
             c.appendTo("#card").html(questions[questionCount].answers.c);
             d.appendTo("#card").html(questions[questionCount].answers.d);
-
         }
     }
     function showAnswer() {
@@ -196,7 +197,7 @@ $(document).ready(function () {
         d.detach();
         setTimeout(nextQuestion, 5000)
         questionCount++;
-        if(questionCount === questions.length){
+        if (questionCount === questions.length) {
             clearTimeout(nextQuestion);
             setTimeout(finalScreen, 7000);
         }
@@ -207,19 +208,16 @@ $(document).ready(function () {
     function timesup() {
         currentQuestion.html(questions[questionCount].timeUpReturn);
         wrongAnswers++
-        alert("Times Up!");
         showAnswer();
     }
     function incorrectAnswer() {
         currentQuestion.html(questions[questionCount].incorrectReturn);
         wrongAnswers++
-        alert("Wrong Answer");
         showAnswer();
     }
     function correctAnswer() {
         currentQuestion.html(questions[questionCount].correctReturn);
         rightAnswers++
-        alert("Correct!");
         showAnswer();
     }
 
@@ -230,29 +228,31 @@ $(document).ready(function () {
             timesup();
         }
     }
-    SRbtn.click(function() {
+    SRbtn.click(function () {
         if (!triviaStart) {
             nextQuestion();
         }
     });
-    function finalScreen(){
+    function finalScreen() {
         triviaStart = false;
         clearInterval(timerNext);
         timer.detach();
         questionNumber.detach();
-        currentQuestion.text("Games over! Heres Your Score");
-        right.appendTo("#card").text("You got " + rightAnswers + "questions right.");
-        wrong.appendTo("#card").text("You got " + wrongAnswers + "questions wrong.");
+        currentQuestion.detach();
+        $("#game-over").text("Games over! Heres Your Score");
+        right.text("You got " + rightAnswers + "questions right.");
+        wrong.text("You got " + wrongAnswers + "questions wrong.");
         a.detach();
         b.detach();
         c.detach();
         d.detach();
         SRbtn.show();
+        SRbtn.addClass("startbtn2");
         SRbtn.appendTo("#Card").text('Restart');
         reset();
     }
 
-    answers.click(function() {
+    answers.click(function () {
         clickID = $(this).attr("id");
         console.log(this);
         if (clickID === questions[questionCount].correctAnswer) {
