@@ -19,6 +19,8 @@ $(document).ready(function () {
     var right = $("#rights")
     var wrong = $("#wrongs")
     var SRbtn = $("#SRbutton")
+    var SRbtn2 = $("#SRbutton2")
+
 
     const questions = [
         {
@@ -50,133 +52,126 @@ $(document).ready(function () {
             timeUpReturn: "Times Up! the year was 2012!",
 
         },
-        // {
-        //     questionNum: 3,
-        //     question: "Who did The Avengers fought during the Infinty War?",
-        //     answers: {
-        //         a: "Loki",
-        //         b: "S.H.I.E.L.D",
-        //         c: "Thor",
-        //         d: "Thanos",
-        //     },
-        //     correctAnswer: "d",
-        //     correctReturn: "Correct! the Avengers fought Thanos!",
-        //     incorrectReturn: "Wrong! the Avengers fought Thanos!",
-        //     timeUpReturn: "Times Up! the Avengers fought Thanos!",
-        // },
-        // {
-        //     questionNum: 4,
-        //     question: "Captain America's Shield is made of?",
-        //     answers: {
-        //         a: "Vibranium",
-        //         b: "Adamantium",
-        //         c: "Kryptonite",
-        //         d: "Chrome",
-        //     },
-        //     correctAnswer: "a",
-        //     correctReturn: "Correct! Captain America's Shield is made of Vibranium!",
-        //     incorrectReturn: "Wrong! Captain America's Shield is made of Vibranium!",
-        //     timeUpReturn: "Times Up! Captain America's Shield is made of Vibranium!",
-        // },
-        // {
-        //     questionNum: 5,
-        //     question: "What is the name of Tony Stark’s personal secretary?",
-        //     answers: {
-        //         a: "Peggy Carter",
-        //         b: "Pepper Potts",
-        //         c: "Phil Coulson",
-        //         d: "Sam Wilson",
-        //     },
-        //     correctAnswer: "b",
-        //     correctReturn: "Correct! Tony Stark's personal secretary is Pepper Potts!",
-        //     incorrectReturn: "Wrong! Tony Stark's personal secretary is Pepper Potts!",
-        //     timeUpReturn: "Times Up! Tony Stark's personal secretary is Pepper Potts!",
-        // },
-        // {
-        //     questionNum: 6,
-        //     question: "What was Dr. Strange’s profession before he became Sorcerer Supreme?",
-        //     answers: {
-        //         a: "Profess",
-        //         b: "Dematologist",
-        //         c: "Dentist",
-        //         d: "Neurosurgeon",
-        //     },
-        //     correctAnswer: "d",
-        //     correctReturn: "Correct! Dr. Strang was a Neurosurgeon!",
-        //     incorrectReturn: "Wrong! Dr. Strang was a Neurosurgeon!",
-        //     timeUpReturn: "Times Up! Dr. Strang was a Neurosurgeon!",
-        // },
-        // {
-        //     questionNum: 7,
-        //     question: "What is the name of Peter Quill’s alter-ego in Guardians of the Galaxy?",
-        //     answers: {
-        //         a: "Yondu",
-        //         b: "Drax",
-        //         c: "Star-Lord",
-        //         d: "Groot",
-        //     },
-        //     correctAnswer: "c",
-        //     correctReturn: "Correct! Peter Quil's alter-ego is Star-Lord!",
-        //     incorrectReturn: "Wrong! Peter Quil's alter-ego is Star-Lord!",
-        //     timeUpReturn: "Times Up! Peter Quil's alter-ego is Star-Lord!",
-        // },
-        // {
-        //     questionNum: 8,
-        //     question: "At the end of “The Avengers”, what do the Avengers go eat together before disassembling?",
-        //     answers: {
-        //         a: "Sushi",
-        //         b: "Shawarma",
-        //         c: "Spaghetti",
-        //         d: "Salad",
-        //     },
-        //     correctAnswer: "b",
-        //     correctReturn: "Correct! The Avengers went to go eat Shawarma!",
-        //     incorrectReturn: "Wrong! The Avengers went to go eat Shawarma!",
-        //     timeUpReturn: "Times Up! The Avengers went to go eat Shawarma!",
-        // },
-        // {
-        //     questionNum: 9,
-        //     question: "What is the name of Tony Stark’s personal butler?",
-        //     answers: {
-        //         a: "Jeeves",
-        //         b: "Jarvis",
-        //         c: "Alfred",
-        //         d: "Jennings",
-        //     },
-        //     correctAnswer: "b",
-        //     correctReturn: "Correct! Tony Stark's personal butler is Jarvis!",
-        //     incorrectReturn: "Wrong! Tony Stark's personal butler is Jarvis!",
-        //     timeUpReturn: "Times Up! Tony Stark's personal butler is Jarvis!",
-        // },
-        // {
-        //     questionNum: 10,
-        //     question: "What actor played Ant-Man?",
-        //     answers: {
-        //         a: "Paul Rudd",
-        //         b: "Chris Hemsworth",
-        //         c: "Chris Pratt",
-        //         d: "Benedict Cumberbatch",
-        //     },
-        //     correctAnswer: "a",
-        //     correctReturn: "Correct! The actor who played Ant-Man is Paul Rudd!",
-        //     incorrectReturn: "Wrong! The actor who played Ant-Man is Paul Rudd!",
-        //     timeUpReturn: "Times Up! The actor who played Ant-Man is Paul Rudd!",
-        // },
+        {
+            questionNum: 3,
+            question: "Who did The Avengers fought during the Infinty War?",
+            answers: {
+                a: "Loki",
+                b: "S.H.I.E.L.D",
+                c: "Thor",
+                d: "Thanos",
+            },
+            correctAnswer: "d",
+            correctReturn: "Correct! the Avengers fought Thanos!",
+            incorrectReturn: "Wrong! the Avengers fought Thanos!",
+            timeUpReturn: "Times Up! the Avengers fought Thanos!",
+        },
+        {
+            questionNum: 4,
+            question: "Captain America's Shield is made of?",
+            answers: {
+                a: "Vibranium",
+                b: "Adamantium",
+                c: "Kryptonite",
+                d: "Chrome",
+            },
+            correctAnswer: "a",
+            correctReturn: "Correct! Captain America's Shield is made of Vibranium!",
+            incorrectReturn: "Wrong! Captain America's Shield is made of Vibranium!",
+            timeUpReturn: "Times Up! Captain America's Shield is made of Vibranium!",
+        },
+        {
+            questionNum: 5,
+            question: "What is the name of Tony Stark’s personal secretary?",
+            answers: {
+                a: "Peggy Carter",
+                b: "Pepper Potts",
+                c: "Phil Coulson",
+                d: "Sam Wilson",
+            },
+            correctAnswer: "b",
+            correctReturn: "Correct! Tony Stark's personal secretary is Pepper Potts!",
+            incorrectReturn: "Wrong! Tony Stark's personal secretary is Pepper Potts!",
+            timeUpReturn: "Times Up! Tony Stark's personal secretary is Pepper Potts!",
+        },
+        {
+            questionNum: 6,
+            question: "What was Dr. Strange’s profession before he became Sorcerer Supreme?",
+            answers: {
+                a: "Profess",
+                b: "Dematologist",
+                c: "Dentist",
+                d: "Neurosurgeon",
+            },
+            correctAnswer: "d",
+            correctReturn: "Correct! Dr. Strang was a Neurosurgeon!",
+            incorrectReturn: "Wrong! Dr. Strang was a Neurosurgeon!",
+            timeUpReturn: "Times Up! Dr. Strang was a Neurosurgeon!",
+        },
+        {
+            questionNum: 7,
+            question: "What is the name of Peter Quill’s alter-ego in Guardians of the Galaxy?",
+            answers: {
+                a: "Yondu",
+                b: "Drax",
+                c: "Star-Lord",
+                d: "Groot",
+            },
+            correctAnswer: "c",
+            correctReturn: "Correct! Peter Quil's alter-ego is Star-Lord!",
+            incorrectReturn: "Wrong! Peter Quil's alter-ego is Star-Lord!",
+            timeUpReturn: "Times Up! Peter Quil's alter-ego is Star-Lord!",
+        },
+        {
+            questionNum: 8,
+            question: "At the end of “The Avengers”, what do the Avengers go eat together before disassembling?",
+            answers: {
+                a: "Sushi",
+                b: "Shawarma",
+                c: "Spaghetti",
+                d: "Salad",
+            },
+            correctAnswer: "b",
+            correctReturn: "Correct! The Avengers went to go eat Shawarma!",
+            incorrectReturn: "Wrong! The Avengers went to go eat Shawarma!",
+            timeUpReturn: "Times Up! The Avengers went to go eat Shawarma!",
+        },
+        {
+            questionNum: 9,
+            question: "What is the name of Tony Stark’s personal butler?",
+            answers: {
+                a: "Jeeves",
+                b: "Jarvis",
+                c: "Alfred",
+                d: "Jennings",
+            },
+            correctAnswer: "b",
+            correctReturn: "Correct! Tony Stark's personal butler is Jarvis!",
+            incorrectReturn: "Wrong! Tony Stark's personal butler is Jarvis!",
+            timeUpReturn: "Times Up! Tony Stark's personal butler is Jarvis!",
+        },
+        {
+            questionNum: 10,
+            question: "What actor played Ant-Man?",
+            answers: {
+                a: "Paul Rudd",
+                b: "Chris Hemsworth",
+                c: "Chris Pratt",
+                d: "Benedict Cumberbatch",
+            },
+            correctAnswer: "a",
+            correctReturn: "Correct! The actor who played Ant-Man is Paul Rudd!",
+            incorrectReturn: "Wrong! The actor who played Ant-Man is Paul Rudd!",
+            timeUpReturn: "Times Up! The actor who played Ant-Man is Paul Rudd!",
+        },
     ]
 
-    right.detach();
-
-    function reset() {
-        rightAnswers = 0;
-        wrongAnswers = 0;
-        questionCount = 0;
-
-    }
-
+    SRbtn2.hide();
     function nextQuestion() {
         if (questionCount < questions.length) {
             triviaStart = true;
             timer.show();
+            SRbtn2.hide();
             questionCountdown = 20;
             timerNext = setInterval(timerCountdown, 1000);
             SRbtn.hide();
@@ -232,7 +227,12 @@ $(document).ready(function () {
         if (!triviaStart) {
             nextQuestion();
         }
+       
     });
+    SRbtn2.click(function () {
+        reset();
+    });
+
     function finalScreen() {
         triviaStart = false;
         clearInterval(timerNext);
@@ -246,10 +246,17 @@ $(document).ready(function () {
         b.detach();
         c.detach();
         d.detach();
-        SRbtn.show();
-        SRbtn.addClass("startbtn2");
-        SRbtn.appendTo("#Card").text('Restart');
-        reset();
+        SRbtn2.show();
+    }
+    function reset() {
+        rightAnswers = 0;
+        wrongAnswers = 0;
+        questionCount = 0;
+        right.empty();
+        wrong.empty();
+        $("#game-over").empty();
+        nextQuestion();
+
     }
 
     answers.click(function () {
